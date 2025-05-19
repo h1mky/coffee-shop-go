@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
+	"log"
 	"net/http"
 )
 
@@ -27,7 +28,7 @@ func StartServer() {
 
 	err := http.ListenAndServe(":3000", r)
 	if err != nil {
-		return
+		log.Fatalf("Failed to start server: %v", err)
 	}
 
 }
