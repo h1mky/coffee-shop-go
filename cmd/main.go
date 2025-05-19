@@ -1,6 +1,9 @@
 package main
 
-import "github.com/joho/godotenv"
+import (
+	"coffee-shop/iternal/router"
+	"github.com/joho/godotenv"
+)
 
 func main() {
 	err := godotenv.Load(".env")
@@ -8,4 +11,5 @@ func main() {
 		return
 	}
 
+	router.StartServer()
 }
