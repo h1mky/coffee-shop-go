@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func GetAllCardHttp(w http.ResponseWriter, r *http.Request) {
+func GetAllCardHandler(w http.ResponseWriter, r *http.Request) {
 
 	ctx := r.Context()
 
