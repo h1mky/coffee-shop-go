@@ -1,6 +1,7 @@
 package router
 
 import (
+	http2 "coffee-shop/iternal/http"
 	"fmt"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
@@ -19,6 +20,7 @@ func StartServer() {
 		MaxAge:           300,
 	}))
 
+	r.Get("/cards", http2.GetAllCardHttp)
 	fmt.Println("Server started on :3000")
 
 	err := http.ListenAndServe(":3000", r)

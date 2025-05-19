@@ -20,7 +20,7 @@ func Connect() {
 	user := "postgres"
 	host := "localhost"
 	port := "5432"
-	dbname := "dbname"
+	dbname := "coffee-shop"
 
 	dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", user, password, host, port, dbname)
 

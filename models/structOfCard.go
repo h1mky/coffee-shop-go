@@ -1,11 +1,11 @@
 package models
 
 type CoffeeCard struct {
-	Id          string  `json:"id"`
-	Img         string  `json:"img"`
-	CoffeeName  string  `json:"coffeeName"`
-	Country     string  `json:"country"`
-	Price       float64 `json:"price"`
-	Recommended bool    `json:"recommended"`
-	Description string  `json:"description"`
+	Id          string  `db:"id" json:"id"`
+	Img         string  `db:"img" json:"img"`
+	CoffeeName  string  `db:"coffee_name" json:"coffeeName"`
+	Country     string  `db:"country" json:"country"`
+	Price       float64 `db:"price" json:"price"`
+	Recommended bool    `db:"recommended" json:"recommended"`
+	Description string  `db:"description" json:"description"`
 }
