@@ -24,7 +24,7 @@ func StartServer() {
 	r.Get("/cards", http2.GetAllCardHandler)
 	fmt.Println("Server started on :3000")
 
-	r.Get("/cards/:id", http2.GetSingleCardHandler)
+	r.Get("/cards/{id}", http2.GetSingleCardHandler)
 
 	err := http.ListenAndServe(":3000", r)
 	if err != nil {

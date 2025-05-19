@@ -9,7 +9,7 @@ import (
 
 func GetAllCard(ctx context.Context) ([]models.CoffeeCard, error) {
 
-	ctx, cancel := context.WithTimeout(context.Background(), 4*time.Second)
+	ctx, cancel := context.WithTimeout(ctx, 4*time.Second)
 
 	defer cancel()
 

@@ -11,6 +11,7 @@ func GetSingleCardHandler(w http.ResponseWriter, r *http.Request) {
 
 	params, err := getParams(r)
 	if err != nil {
+		http.Error(w, "failed to find params", http.StatusBadRequest)
 		return
 	}
 	card, err := db.GetSingleCard(ctx, params)
