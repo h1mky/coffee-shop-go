@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func UpdateCard(ctx context.Context, id int, card models.CoffeeCardInput) error {
+func UpdateCard(ctx context.Context, id int, card models.CoffeeCard) error {
 	ctx, cancel := context.WithTimeout(ctx, time.Second*4)
 
 	query := `

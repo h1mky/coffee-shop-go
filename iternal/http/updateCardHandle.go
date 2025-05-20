@@ -8,7 +8,7 @@ import (
 
 func UpdateCardHandle(w http.ResponseWriter, r *http.Request) {
 
-	var card models.CoffeeCardInput
+	var card models.CoffeeCard
 
 	ctx := r.Context()
 

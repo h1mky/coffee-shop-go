@@ -2,7 +2,7 @@ package db
 
 import "coffee-shop/models"
 
-func ToParams(id int, card models.CoffeeCardInput) map[string]interface{} {
+func ToParams(id int, card models.CoffeeCard) map[string]interface{} {
 
 	return map[string]interface{}{
 		"id":          id,
