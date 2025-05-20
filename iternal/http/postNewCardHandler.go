@@ -18,6 +18,7 @@ func PostNewCardHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "invalid json", http.StatusBadRequest)
 		return
 	}
+
 	if err := validate.ValidateStruct(card); err != nil {
 		http.Error(w, "error on validate json", http.StatusBadRequest)
 		return

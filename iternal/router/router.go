@@ -28,6 +28,8 @@ func StartServer() {
 
 	r.Post("/cards", http2.PostNewCardHandler)
 
+	r.Delete("/cards/{id}", http2.DeleteCardHandler)
+
 	err := http.ListenAndServe(":3000", r)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
