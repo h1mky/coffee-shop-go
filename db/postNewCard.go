@@ -13,7 +13,7 @@ func PostNewCard(ctx context.Context, card interface{}) error {
 	_, err := DB.NamedExec(
 		`INSERT INTO coffee_card ( img, coffee_name, country, price, recommended, description)
          VALUES ( :img, :coffee_name, :country, :price, :recommended, :description)`,
-		&card,
+		card,
 	)
 	if err != nil {
 		return err
