@@ -15,7 +15,7 @@ func GetAllCard(ctx context.Context) ([]models.CoffeeCard, error) {
 
 	var products []models.CoffeeCard
 
-	err := DB.SelectContext(ctx, &products, "SELECT * FROM coffee_card")
+	err := DB.SelectContext(ctx, &products, "SELECT * FROM coffee_card ORDER BY created_at DESC")
 
 	if err != nil {
 		log.Println("Error fetching a card", err)
