@@ -1,7 +1,7 @@
 package router
 
 import (
-	http2 "coffee-shop/iternal/http"
+	http2 "coffee-shop/internal/http"
 	"fmt"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
@@ -29,6 +29,8 @@ func StartServer() {
 	r.Post("/cards", http2.PostNewCardHandler)
 
 	r.Delete("/cards/{id}", http2.DeleteCardHandler)
+
+	r.Patch("/cards/{id}", http2.UpdateCardHandle)
 
 	err := http.ListenAndServe(":3000", r)
 	if err != nil {

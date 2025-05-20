@@ -2,7 +2,7 @@ package main
 
 import (
 	"coffee-shop/db"
-	"coffee-shop/iternal/router"
+	"coffee-shop/internal/router"
 	"github.com/joho/godotenv"
 )
 

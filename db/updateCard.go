@@ -9,6 +9,8 @@ import (
 func UpdateCard(ctx context.Context, id int, card models.CoffeeCard) error {
 	ctx, cancel := context.WithTimeout(ctx, time.Second*4)
 
+	defer cancel()
+
 	query := `
 		UPDATE coffee_card 
 		SET 
@@ -22,8 +24,6 @@ func UpdateCard(ctx context.Context, id int, card models.CoffeeCard) error {
 	`
 
 	params := ToParams(id, card)
-
-	defer cancel()
 
 	if _, err := DB.NamedExecContext(ctx, query, params); err != nil {
 		return err
