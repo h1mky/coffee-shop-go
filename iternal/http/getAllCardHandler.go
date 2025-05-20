@@ -17,4 +17,6 @@ func GetAllCardHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	JsonEncode(w, cards)
+
+	w.WriteHeader(http.StatusNoContent)
 }
