@@ -7,9 +7,16 @@ import (
 	"github.com/go-chi/cors"
 	"log"
 	"net/http"
+	"os"
 )
 
 func StartServer() {
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // дефолтный порт для локальной разработки
+	}
+
 	r := chi.NewRouter()
 
 	r.Use(cors.Handler(cors.Options{
@@ -32,7 +39,7 @@ func StartServer() {
 
 	r.Patch("/cards/{id}", http2.UpdateCardHandle)
 
-	err := http.ListenAndServe(":3000", r)
+	err := http.ListenAndServe(":"+port, r)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
