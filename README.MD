@@ -1,5 +1,3 @@
-
-
 ---
 
 ````md
@@ -15,6 +13,8 @@ A RESTful API for managing coffee cards. Built with Go, Chi router, SQLx, and Po
    ```bash
    git clone https://github.com/your-name/coffee-shop.git
    cd coffee-shop
+   ```
+
 ````
 
 2. Install dependencies:
@@ -29,7 +29,7 @@ A RESTful API for managing coffee cards. Built with Go, Chi router, SQLx, and Po
 
    ```sql
    CREATE TABLE coffee_card (
-     id SERIAL PRIMARY KEY,
+     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
      img TEXT NOT NULL,
      coffee_name TEXT NOT NULL,
      country TEXT NOT NULL,
@@ -43,7 +43,7 @@ A RESTful API for managing coffee cards. Built with Go, Chi router, SQLx, and Po
 5. Start the server:
 
    ```bash
-   go run main.go
+   go run cmd/main.go
    ```
 
 ---
@@ -95,3 +95,4 @@ Content-Type: application/json
 
 
 
+````
