@@ -1,4 +1,4 @@
----
+--
 
 ````md
 # ☕ Coffee Shop API
@@ -14,7 +14,6 @@ A RESTful API for managing coffee cards. Built with Go, Chi router, SQLx, and Po
    git clone https://github.com/your-name/coffee-shop.git
    cd coffee-shop
    ```
-
 ````
 
 2. Install dependencies:
@@ -50,9 +49,9 @@ A RESTful API for managing coffee cards. Built with Go, Chi router, SQLx, and Po
 
 ## 🧱 Dependencies
 
-* [`chi`](https://github.com/go-chi/chi) — lightweight HTTP router
-* [`sqlx`](https://github.com/jmoiron/sqlx) — extensions to database/sql for struct support
-* [`go-playground/validator`](https://github.com/go-playground/validator) — struct validation
+- [`chi`](https://github.com/go-chi/chi) — lightweight HTTP router
+- [`sqlx`](https://github.com/jmoiron/sqlx) — extensions to database/sql for struct support
+- [`go-playground/validator`](https://github.com/go-playground/validator) — struct validation
 
 ---
 
@@ -88,11 +87,10 @@ Content-Type: application/json
 
 ## 🔧 TODO
 
-* [ ] Add pagination
-* [ ] Write tests
-* [ ] Set up CI/CD
+- [ ] Add pagination
+- [ ] Write tests
+- [ ] Set up CI/CD
 
+```
 
-
-
-````
+```
