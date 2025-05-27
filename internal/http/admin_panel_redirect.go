@@ -11,7 +11,7 @@ type UserStruct struct {
 }
 
 func AdminPanelRedirect(w http.ResponseWriter, r *http.Request) {
-	valideName := os.Getenv("USERNAME")
+	valideName := os.Getenv("ADMIN_USERNAME")
 	validePass := os.Getenv("ADMIN_PASSWORD")
 
 	var req UserStruct
