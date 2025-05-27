@@ -20,7 +20,7 @@ func UpdateCard(ctx context.Context, id int, card models.CoffeeCard) error {
 			price = :price,
 			recommended = :recommended,
 			description = :description
-		WHERE id = :id
+			WHERE id = :id
 	`
 
 	params := ToParams(id, card)

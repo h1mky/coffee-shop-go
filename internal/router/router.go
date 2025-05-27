@@ -39,6 +39,8 @@ func StartServer() {
 
 	r.Patch("/cards/{id}", http2.UpdateCardHandle)
 
+	r.Post("/admin", http2.AdminPanelRedirect)
+
 	err := http.ListenAndServe(":"+port, r)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
