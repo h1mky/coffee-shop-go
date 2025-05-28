@@ -14,7 +14,7 @@ func StartServer() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // дефолтный порт для локальной разработки
+		port = "8080"
 	}
 
 	r := chi.NewRouter()
@@ -41,6 +41,7 @@ func StartServer() {
 
 	r.Post("/admin", http2.AdminPanelRedirect)
 
+	log.Printf("Starting server on port %s...\n", port)
 	err := http.ListenAndServe(":"+port, r)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
