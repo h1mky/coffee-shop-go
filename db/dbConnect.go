@@ -22,7 +22,7 @@ func Connect() {
 		log.Fatal("DB_PASSWORD env variable is not set")
 	}
 
-	dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", user, password, host, port, dbname)
+	dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=require", user, password, host, port, dbname)
 
 	var err error
 	DB, err = sqlx.Connect("postgres", dsn)
