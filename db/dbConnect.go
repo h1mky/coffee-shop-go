@@ -13,14 +13,14 @@ var DB *sqlx.DB
 
 func Connect() {
 	password := os.Getenv("DB_PASSWORD")
+	user := os.Getenv("DB_USER")
+	host := os.Getenv("DB_HOST")
+	port := os.Getenv("DB_PORT")
+	dbname := os.Getenv("DB_NAME")
+
 	if password == "" {
 		log.Fatal("DB_PASSWORD env variable is not set")
 	}
-
-	user := "postgres"
-	host := "localhost"
-	port := "5432"
-	dbname := "coffee-shop"
 
 	dsn := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", user, password, host, port, dbname)
 
