@@ -29,7 +29,7 @@ func StartServer() {
 	}))
 
 	r.Get("/cards", http2.GetAllCardHandler)
-	fmt.Println("Server started on :3000")
+	fmt.Printf("Server started on :%s\n", port)
 
 	r.Get("/cards/{id}", http2.GetSingleCardHandler)
 
