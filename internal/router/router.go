@@ -20,7 +20,10 @@ func StartServer() {
 	r := chi.NewRouter()
 
 	r.Use(cors.Handler(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173,https://coffeeshop-vu2y.vercel.app/"},
+		AllowedOrigins: []string{
+			"http://localhost:5173",
+			"https://coffeeshop-vu2y.vercel.app",
+		},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
 		AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
 		ExposedHeaders:   []string{"Link"},
